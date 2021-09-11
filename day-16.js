@@ -10,5 +10,33 @@ function threeInOne(arr) {
 }
 
 //http://www.codewars.com/kata/572df796914b5ba27c000c90
+function sortIt(arr) {
+  const newArr = arr.slice();
+  newArr.sort((a, b) => {
+    const count1 = arr.filter((value) => value === a).length;
+    const count2 = arr.filter((value) => value === b).length;
+    if (count1 === count2) return b - a;
+    return count1 > count2 ? 1 : -1;
+  });
+  return newArr;
+}
+
 
 //http://www.codewars.com/kata/572fdeb4380bb703fc00002c
+function isolateIt(arr) {
+  let newArr = arr.map((x, i) => {
+    if (arr[i].length % 2 === 0) {
+      return (
+        x.slice(0, Math.floor(arr[i].length / 2)) +
+        '|' +
+        x.slice(Math.floor(arr[i].length / 2))
+      );
+    } else
+      return (
+        x.slice(0, Math.floor(arr[i].length / 2)) +
+        '|' +
+        x.slice(Math.floor(arr[i].length / 2) + 1)
+      );
+  });
+  return newArr;
+}
