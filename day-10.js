@@ -7,7 +7,25 @@ function alienLanguage(str) {
 }
 
 //http://www.codewars.com/kata/57284d23e81185ae6200162a
-
+function topSecret(str) {
+  const char = str.split("");
+  for (let i = 0; i < char.length; i++) {
+    if (
+      char[i].charCodeAt() < 65 ||
+      (char[i].charCodeAt() > 90 && char[i].charCodeAt() < 97) ||
+      char[i].charCodeAt() > 122
+    )
+      continue;
+    if (char[i] === "A") char[i] = "X";
+    else if (char[i] === "B") char[i] = "Y";
+    else if (char[i] === "C") char[i] = "Z";
+    else if (char[i] === "a") char[i] = "x";
+    else if (char[i] === "b") char[i] = "y";
+    else if (char[i] === "c") char[i] = "z";
+    else char[i] = String.fromCharCode(char[i].charCodeAt() - 3);
+  }
+  return char.join("");
+}
 
 //http://www.codewars.com/kata/5729b103dd8bac11a900119e
 function fiveLine(s) {
