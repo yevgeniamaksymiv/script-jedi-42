@@ -10,3 +10,5 @@ function tailAndHead(arr) {
 }
 
 //http://www.codewars.com/kata/5732b0351eb838d03300101d
+
+//https://www.codewars.com/kata/5735956413c2054a680009ec
