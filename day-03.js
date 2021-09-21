@@ -14,7 +14,7 @@ function saleHotdogs(n) {
 
 //http://www.codewars.com/kata/572059afc2f4612825000d8a
 function howManydays(month) {
-  var days;
+  let days;
   switch (month) {
     case 1:
       days = 31;
