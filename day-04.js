@@ -11,10 +11,10 @@ function padIt(str, n) {
 
 //http://www.codewars.com/kata/5721a78c283129e416000999
 function pickIt(arr) {
-  var odd = [],
+  let odd = [],
     even = [];
   for (let i = 0; i < arr.length; i++) {
-    arr[i] % 2 != 0 ? odd.push(arr[i]) : even.push(arr[i]);
+    arr[i] % 2 !== 0 ? odd.push(arr[i]) : even.push(arr[i]);
   }
   return [odd, even];
 }
@@ -34,7 +34,7 @@ function grabDoll(dolls) {
 //http://www.codewars.com/kata/5722b3f0bd5583cf44001000
 function giveMeFive(obj) {
   const arrFive = [];
-  for (let key in obj) {
+  for (const key in obj) {
     if (key.length === 5) arrFive.push(key);
     if (obj[key].length === 5) arrFive.push(obj[key]);
   }
