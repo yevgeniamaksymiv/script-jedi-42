@@ -10,5 +10,11 @@ function tailAndHead(arr) {
 }
 
 //http://www.codewars.com/kata/5732b0351eb838d03300101d
+function blackAndWhite(arr){
+  if (Array.isArray(arr) === false) return "It's a fake array";
+  const newArr = new Set([...arr]);
+  if (newArr.has(5) && newArr.has(13)) return "It's a black array";
+  if (!newArr.has(5) || !newArr.has(13)) return "It's a white array";
+}
 
 //https://www.codewars.com/kata/5735956413c2054a680009ec
