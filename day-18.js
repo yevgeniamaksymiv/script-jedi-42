@@ -18,3 +18,19 @@ function blackAndWhite(arr){
 }
 
 //https://www.codewars.com/kata/5735956413c2054a680009ec
+function rndCode() {
+  const ltr = "ABCDEFGHIJKLM";
+  const num = "1234567890";
+  const sym = "~!@#$%^&*";
+  let code1 = "";
+  let code2 = "";
+  let code3 = "";
+  for (let i = 0; i < 2; i++)
+    code1 += ltr.charAt(~~(Math.random() * ltr.length));
+  for (let i = 0; i < 4; i++)
+    code2 += num.charAt(~~(Math.random() * num.length));
+  for (let i = 0; i < 2; i++)
+    code3 += sym.charAt(~~(Math.random() * sym.length));
+  return code1 + code2 + code3;
+}
+
