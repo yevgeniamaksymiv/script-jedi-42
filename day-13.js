@@ -8,3 +8,15 @@ function match(candidate, job) {
 }
 
 //https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
+function match(job, candidates) {
+  return candidates.filter(
+    (cand) =>
+      (job.equityMax > 0 || cand.desiresEquity === false) &&
+      job.locations.some(
+        (loc) =>
+          cand.currentLocation === loc ||
+          cand.desiredLocations.some((dl) => dl === loc)
+      )
+  );
+}
+
