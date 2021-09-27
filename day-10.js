@@ -1,10 +1,11 @@
 //http://www.codewars.com/kata/5728203b7fc662a4c4000ef3
 function alienLanguage(str) {
-  return str
+  const alienStr = str
     .toUpperCase()
     .split(" ")
     .map((word) => word.slice(0, -1) + word[word.length - 1].toLowerCase())
     .join(" ");
+  return alienStr;
 }
 
 //http://www.codewars.com/kata/57284d23e81185ae6200162a
