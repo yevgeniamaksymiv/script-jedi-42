@@ -9,7 +9,7 @@ function match(candidate, job) {
 
 //https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
 function match(job, candidates) {
-  return candidates.filter(
+  const candToJob = candidates.filter(
     (cand) =>
       (job.equityMax > 0 || cand.desiresEquity === false) &&
       job.locations.some(
@@ -18,5 +18,7 @@ function match(job, candidates) {
           cand.desiredLocations.some((dl) => dl === loc)
       )
   );
+  return candToJob;
 }
+
 
