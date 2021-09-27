@@ -23,5 +23,7 @@ function colorOf(r, g, b) {
 
 //http://www.codewars.com/kata/57256064856584bc47000611
 function howManySmaller(arr, n) {
-  return arr.filter((el) => parseFloat(el.toFixed(2)) < n).length;
+  const count = arr.filter((el) => parseFloat(el.toFixed(2)) < n).length;
+  return count;
 }
+
