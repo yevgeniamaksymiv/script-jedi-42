@@ -13,12 +13,13 @@ function process2Arrays(arr1, arr2) {
   let count2 = 0;
   let count3 = 0;
   let count4 = 0;
-  let s1 = new Set([...arr1]);
-  for (let i = 0; i < arr2.length; i++){
-    if (s1.has(arr2[i])) count1++;
-    if (!s1.has(arr2[i])) count4++;
-    }
+  const s1 = new Set([...arr1]);
+  for (const num of arr2) {
+    if (s1.has(num)) count1++;
+    if (!s1.has(num)) count4++;
+  }
   count2 = s1.size - count1 + count4;
   count3 = s1.size - count1;
   return [count1, count2, count3, count4];
 }
+
