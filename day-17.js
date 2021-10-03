@@ -1,6 +1,6 @@
 //http://www.codewars.com/kata/573023c81add650b84000429
 function countGrade(scores) {
-  var obj = {S: 0, A: 0, B: 0, C: 0, D: 0, X: 0};
+  const obj = {S: 0, A: 0, B: 0, C: 0, D: 0, X: 0};
   scores.filter(s => {
     if (s === 100) {
       obj[`S`]++;
