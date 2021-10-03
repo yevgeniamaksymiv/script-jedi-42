@@ -1,7 +1,7 @@
 //http://www.codewars.com/kata/572ab0cfa3af384df7000ff8
 function shuffleIt(arr, ...xArr) {
-  for (let i = 0; i < xArr.length; i++) {
-    const [a, b] = [xArr[i][0], xArr[i][1]];
+  for (const num of xArr) {
+    const [a, b] = [num[0], num[1]];
     [arr[b], arr[a]] = [arr[a], arr[b]];
   }
   return arr;
