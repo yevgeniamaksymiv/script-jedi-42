@@ -1,7 +1,7 @@
 //http://www.codewars.com/kata/572ab0cfa3af384df7000ff8
 function shuffleIt(arr, ...xArr) {
   for (let i = 0; i < xArr.length; i++) {
-    let [a, b] = [xArr[i][0], xArr[i][1]];
+    const [a, b] = [xArr[i][0], xArr[i][1]];
     [arr[b], arr[a]] = [arr[a], arr[b]];
   }
   return arr;
@@ -10,10 +10,10 @@ function shuffleIt(arr, ...xArr) {
 //https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/
 function loopArr(arr, direction, steps) {
   if (direction === 'left') {
-    let arr1 = arr.splice(0, steps);
+    const arr1 = arr.splice(0, steps);
     return [...arr, ...arr1];
   } else {
-    let arr2 = arr.splice(-steps);
+    const arr2 = arr.splice(-steps);
     return [...arr2, ...arr];
   }
 }
