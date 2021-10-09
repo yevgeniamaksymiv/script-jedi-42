@@ -1,27 +1,27 @@
 //http://www.codewars.com/kata/573023c81add650b84000429
 function countGrade(scores) {
-  const obj = {S: 0, A: 0, B: 0, C: 0, D: 0, X: 0};
+  const gradeResult = {S: 0, A: 0, B: 0, C: 0, D: 0, X: 0};
   scores.filter(s => {
     if (s === 100) {
-      obj[`S`]++;
+      gradeResult[`S`]++;
     }
     if (s < 100 && s >= 90) {
-      obj[`A`]++;
+      gradeResult[`A`]++;
     }
     if (s < 90 && s >= 80) {
-      obj[`B`]++;
+      gradeResult[`B`]++;
     }
     if (s < 80 && s >= 60) {
-      obj[`C`]++;
+      gradeResult[`C`]++;
     }
     if (s < 60 && s >= 0) {
-      obj[`D`]++;
+      gradeResult[`D`]++;
     }
     if (s === -1) {
-      obj[`X`]++;
+      gradeResult[`X`]++;
     }
   });
-  return obj;
+  return gradeResult;
 }
 
 //http://www.codewars.com/kata/57308546bd9f0987c2000d07
@@ -38,9 +38,9 @@ function mirrorImage(arr) {
 
 //http://www.codewars.com/kata/5731861d05d14d6f50000626
 function bigToSmall(arr) {
-  const newArr = [].concat(...arr);
-  newArr.sort((a, b) => {
+  const fromBiggest = [].concat(...arr);
+  fromBiggest.sort((a, b) => {
     return b - a;
   });
-  return newArr.join('>');
+  return fromBiggest.join('>');
 }
