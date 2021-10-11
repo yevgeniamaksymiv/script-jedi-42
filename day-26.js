@@ -8,6 +8,4 @@ Function.prototype.bind = function (ctx) {
 };
 
 //https://www.codewars.com/kata/sort-with-arrow-functions
-var OrderPeople = function (people) {
-  return people.sort((a, b) => a.age - b.age);
-};
+const OrderPeople = (people) => people.sort((a, b) => a.age - b.age);
