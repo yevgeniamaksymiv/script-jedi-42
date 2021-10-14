@@ -7,8 +7,9 @@ Function.prototype.call = function (a, ...args) {
 const alpha = {
   name: "My Alpha",
   getNameFunc: function () {
+    const thisProp = this;
     return function () {
-      return alpha.name;
+      return thisProp.name;
     };
   },
 };
