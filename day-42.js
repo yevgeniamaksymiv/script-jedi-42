@@ -1,10 +1,15 @@
 //https://leetcode.com/problems/two-sum/
-function twoSum(nums, target) {
-  let resultArr = [];
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) resultArr.push(i, j);
+function twoSum(arrNums, target) {
+  let numsObj = {};
+  for (let i = 0; i < arrNums.length; i++) {
+    let num = arrNums[i];
+    numsObj[num] = i;
+  }
+  for (let i = 0; i < arrNums.length; i++) {
+    let diff = target - arrNums[i];
+    if (numsObj.hasOwnProperty(diff) && numsObj[diff] !== i) {
+      return [i, numsObj[diff]];
     }
   }
-  return resultArr;
 }
+
